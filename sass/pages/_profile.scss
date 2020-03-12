@@ -1,0 +1,60 @@
+.profile-main-container{
+    min-width: 36rem; 
+    margin: 0 auto;
+
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    margin: 5% auto 0 auto;
+    @include respond(tab-port){
+        width:90%;
+        margin: 20% auto 0 auto;
+    };
+}
+
+.facebook-name{
+    font-size: 3.2rem;
+    letter-spacing: .15rem;
+    margin-bottom: 0%;
+    text-align: center;
+    font-weight: 900;
+}
+
+.facebook-pic{
+    width:21rem;
+    height:auto;
+    margin: 0 auto 2% auto;
+    animation: profileHead .5s 1;
+    border-radius: 50%;
+    &:hover { transform: scale(1.06); }
+    transition: all .1s;
+}
+
+@keyframes profileHead {
+    0%   {transform: scale(.8);}
+    100% {transform: scale(1);}
+  }
+
+.facebook-email{
+    font-size: 1.7rem;
+    color: grey;
+    text-align: center;
+    font-weight: 100;
+    line-height: 2rem;
+    margin: 0 auto 10% auto;
+}
+
+.facebook-logout{
+    cursor: pointer;
+    color: white;
+    background-color: #3b5998;
+    margin:5% auto 15% auto;
+    text-align: center;
+    padding: .7rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}

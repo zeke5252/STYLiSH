@@ -1,0 +1,50 @@
+.thank-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    margin: 5% auto 0 auto;
+    @include respond(tab-port){
+        width:90%;
+        margin: 20% auto 0 auto;
+    };
+}
+
+.thank-title{
+    font-size: 3.6rem;
+    letter-spacing: .15rem;
+    margin-bottom: 5%;
+    text-align: center;
+    font-weight: 900;
+}
+
+.thank-img{
+    width:6rem;
+    height:auto;
+    margin: 0 auto 7% auto;
+    animation: kiss .3s 1;
+}
+
+@keyframes kiss {
+    0%   {transform: scale(.1);}
+    100% {transform: scale(1);}
+  }
+
+.thank-words{
+    font-size: 1.6rem;
+    color: grey;
+    margin-bottom: 10%;
+    text-align: center;
+    font-weight: 100;
+    line-height: 2.4rem;
+}
+
+.thank-code{
+    color: #de7f5c;
+    margin: 0 auto 10% auto;
+    text-align: center;
+    padding: .5rem 2rem;
+    border: 2px dashed #de7f5c;
+    font-size: 3rem;
+    font-weight: 400;
+}

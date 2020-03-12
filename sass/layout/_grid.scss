@@ -1,0 +1,48 @@
+
+  /* Clear floats after the columns */
+
+
+// .row {
+//     width: $grid-width;
+//     margin: 0 auto;
+//     &:not(:last-child) {
+//         margin-bottom: $gutter-vertical;
+//         @include respond(phone) {
+//             margin-bottom: $gutter-vertical-small;
+//         }
+//     }
+    
+//     @include respond(phone) {
+//         max-width: 50rem;
+//         padding: 0 0;
+//     }
+
+//     @include clearfix;
+
+//     [class^="col-"] {
+//         float: left;
+
+//         &:not(:last-child) {
+//             margin-right: $gutter-horizontal;
+//             @include respond(phone) {
+//                 margin-right: 0;
+//                 margin-bottom: $gutter-vertical-small;
+//             }
+//         }
+//         @include respond(tab-port) {
+//             width: 30% !important;
+//             margin-bottom: 0;
+//         }
+//         @include respond(phone) {
+//             width: 40% !important;
+//         }
+//     }
+
+//     .col-1-of-3 {
+//         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+//         float: left;
+//         &:not(:last-child){
+//             margin-right: $gutter-horizontal;
+//         }
+//     }
+// }

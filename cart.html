@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+            window.fbAsyncInit = function() {
+              FB.init({
+                appId            : '589309351865576',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v5.0'
+              });
+            };
+          </script>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+        <title>Stylish</title>
+        <script src="https://js.tappaysdk.com/tpdirect/v5"></script>
+        <script>
+            TPDirect.setupSDK(12348, 'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF', 'sandbox')
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <header class="header-head">
+                    <div class="header-logo">
+                        <img src="img/logo.png"" alt="logo" title="Stylish logo" class="header-logoImg">
+                        <nav class="header-nav">
+                            <ul class="header-ul">
+                                <li><a id="navLink-women">女裝</a></li>
+                                <li><a id="navLink-men">男裝</a></li>
+                                <li><a id="navLink-accessories">配件</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-search-mobile">
+                        <input type="text" name="keyword" class="header-input" id="search-mobile"/>
+                    </div>
+                    <div class="header-right">
+                        <img src="img/search.png" class="search-mobile-img" id="search-btn-mobile">
+                        <div class="header-search">
+                            <input type="text" name="keyword" class="header-input" id="search-desktop"/>
+                            <a id="header-search-btn">
+                                <img src="img/search.png" alt="search" class="header-search-img">
+                            </a>
+                        </div>
+                        <div class="header-cart-container" id="cart-link">
+                            <div class="header-cart-number">
+                                <strong>20</strong></div>
+                            </div>
+                            <img src="img/member.png" alt="search" class="header-member" id="member-login">
+                    </div>
+                    <div class="header-right-mobile">
+                        <div class="cart-text" id="cart-link-mobile">
+                            <img src="img/cart-mobile.png" alt="cart" class="header-cart-mobile">
+                            <span class="cart-text-content">購物車</span>
+                            <div class="cart-qty-mobile" id="cart-qty-mobile">0</div>
+                        </div>
+                        <div class="cart-text">
+                            <img src="img/member-mobile.png" alt="cart" class="header-cart-mobile">
+                            <span class="cart-text-content">會員</span>
+                        </div>
+                    </div>
+                </header>
+                <div class="header-slogan-top">
+                    <nav class="header-nav-blackBG">
+                        <ul class="header-ul2">
+                                <li><a id="navLink-women2">女裝</a></li>
+                                <li><a id="navLink-men2">男裝</a></li>
+                                <li><a id="navLink-accessories2">配件</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+                <main class="cart-main-container">
+                    <h3 class="cart-title">HOME>BAG</h3>
+                    <div class="cart-container">
+                        <div class="cart-table-head-container" id="cart-product-container">
+                                <div class="cart-table-head-left">
+                                    <div class="cart-table-head-title">購物車<strong id="cart-qty"></strong></div>
+                                </div>
+                                <div class="cart-table-head-right">
+                                    <div class="cart-table-head-lable">數量</div>
+                                    <div class="cart-table-head-lable">單價</div>
+                                    <div class="cart-table-head-lable">小計</div>
+                                </div>
+
+                        </div>
+                        <div class="cart-content-container">
+                            
+                        </div>
+                    </div>
+                    <div class="cart-pay-method">
+                        <div class="cart-pay-country">
+                            <p class="cart-pay-label">配送國家</p> 
+                            <select class="cart-pay-method-dropdown" id="cart-country">
+                                <option value="Taiwan">台灣</option>
+                            </select>
+                        </div>
+                        <div class="cart-pay-when">
+                            <p class="cart-pay-label">付款方式</p> 
+                            <select class="cart-pay-method-dropdown" id="cart-method">
+                                <option value="credit_card">信用卡</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cart-note">
+                        提醒您：
+                        <ul class="cart-note-label">
+                            <li class="cart-note-label-li">選擇宅配。請填寫正確收件人資訊，避免包裹配送不達</li> 
+                            <li class="cart-note-label-li">選擇超商。請填寫正確收件人姓名(與證件相符)，避免無法領取</li> 
+                        </ul>
+                    </div>
+                    <p class="cart-order-info">訂購資料</p>
+                    <div class="cart-order-info-container">
+                        <div class="cart-order-input-item">
+                            <p class="cart-order-label">收件人姓名</p>
+                            <input type="text" class="cart-order-input" id="input-buyer-name"/>
+                        </div>
+                        <div class="cart-order-input-item">
+                            <p class="cart-order-label">信箱</p>
+                            <input type="text" class="cart-order-input" id="input-email"/>
+                        </div>
+                        <div class="cart-order-input-item">
+                            <p class="cart-order-label">手機</p>
+                            <input type="text" class="cart-order-input" id="input-cellphone"/>
+                        </div>
+                        <div class="cart-order-input-item">
+                            <p class="cart-order-label">地址</p>
+                            <input type="text" class="cart-order-input" id="input-address"/>
+                        </div>
+                        <div class="cart-order-input-item">
+                            <p class="cart-order-label">配送時間</p>
+                            <div class="cart-order-label-radio" id="input-time">
+                                <input type="radio" name="time" value="08:00 - 12:00" id="from-0"><span class="cart-order-label-radio-item"> 08:00 - 12:00 </span><br>
+                                <input type="radio" name="time" value="14:00 - 18:00" id="from-1"><span class="cart-order-label-radio-item"> 14:00 - 18:00 </span><br>
+                                <input type="radio" name="time" value="不指定" id="from-2" checked><span class="cart-order-label-radio-item"> 不指定 </span><br>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="cart-tapPay">
+                            <p class="cart-order-label-tapPay">visa卡號</p>
+                            <div class="cart-order-input-item-tapPay tpfield" id="card-number">
+                            </div>
+                        </div>
+                        <div class="cart-tapPay">
+                            <p class="cart-order-label-tapPay">卡片到期日</p>
+                            <div class="cart-order-input-item-tapPay tpfield" id="card-expiration-date">
+                            </div>
+                        </div>
+                        <div class="cart-tapPay">
+                            <p class="cart-order-label-tapPay">卡片後三碼</p>
+                            <div class="cart-order-input-item-tapPay tpfield" id="card-ccv">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="cart-bill-container">
+                        <div class="cart-bill-container-right">
+                            <div class="cart-bill-item">
+                                <div class="cart-bill-title">總金額</div>
+                                <div class="cart-bill-price" id="cart-sum">NT. 1770</div>
+                            </div>
+                            <div class="cart-bill-item">
+                                <div class="cart-bill-title">運費</div>
+                                <div class="cart-bill-price" id="cart-freight">NT.0</div>
+                            </div>
+                            <hr class="cart-bill-line">
+                            <div class="cart-bill-item">
+                                <div class="cart-bill-title">應付金額</div>
+                                <div class="cart-bill-price" id="cart-total">NT.1800</div>
+                            </div>
+                            <a class="cart-bill-confirm" id="cart-send">確認付款</a>
+                        </div>
+                    </div>
+                </main>
+            </main>
+            <footer>
+                <div class="footer-head">
+                        <ul class="footer-ul">
+                            <li>關於Stylish</li>
+                            <li>服務條款</li>
+                            <li>隱私政策</li>
+                            <li>聯絡我們</li>
+                            <li>FAQ</li>
+                        </ul>
+                        <div class="footer-icons">
+                            <img src="img/line.png" class="footer-line" />
+                            <img src="img/twitter.png" class="footer-twitter" />
+                            <img src="img/facebook.png" class="footer-facebook" />
+                            <div class="footer-legalLine">All rights reserved</div>
+                        </div>
+                </div>
+            </footer>
+            <footer>
+                <div class="footer-head-phone">
+                    <ul class="footer-ul-phone">
+                        <li>關於Stylish</li>
+                        <li>服務條款</li>
+                        <li>隱私政策</li>
+                    </ul>
+                    <ul class="footer-ul-phone2">
+                        <li>聯絡我們</li>
+                        <li>FAQ</li>
+                    </ul>
+                    <div class="footer-icons-phone">
+                        <img src="img/line.png" class="footer-line-phone" />
+                        <img src="img/twitter.png" class="footer-twitter-phone" />
+                        <img src="img/facebook.png" class="footer-facebook-phone" />
+                        </div>
+                </div>
+                <span class="footer-legalLine-phone">All rights reserved</span>
+            </footer>
+        </div>
+        <script src="js/cart.js"></script>
+    </body>
+
+</html>

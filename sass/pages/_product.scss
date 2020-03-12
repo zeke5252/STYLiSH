@@ -1,0 +1,237 @@
+.product-main-container {
+    max-width: 96rem;
+    margin:6.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    @include respond(tab-land){
+        margin:4% 4% 6.5rem 4%;
+    };
+}
+.product-img-main{
+    width:58%;
+    height:auto;
+    @include respond(tab-port){
+        position: relative;
+        margin: 0 auto;
+        transform: scale(1.1,1.1) translateY(1.5%);
+
+        
+        width:100%;
+        height:auto;
+    };
+}
+.product-info{
+    width:37%;
+    margin-left: 5%;
+    @include respond(tab-port){
+
+        width:100%;
+        height:auto;
+        margin:15% 5% 0 5%;
+    };
+}
+.product-title{
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    color: #3f3a3a;
+    margin-bottom: 0rem;
+    @include respond(tab-port){
+        font-size: 3.4rem;
+        margin-top: 1rem;
+    };
+}
+.product-id{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    color: #bababa;
+    margin-bottom: 4rem;
+    @include respond(tab-port){
+        margin-bottom: 2rem;
+    };
+
+}
+.product-price{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3f3a3a;
+    margin-bottom: 1rem;
+    @include respond(tab-port){
+        font-size: 2.9rem;
+    };
+}
+.product-info-line-hor{
+    margin: 0;
+    width: 100%;
+    border: solid 1px #3f3a3a;
+    margin-bottom: 3rem;
+}
+.product-property{
+    width: 100%;
+    height:1.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+product-property-color{
+    display: inline-block;
+}
+
+[class *= product-color-]{
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-right: 1rem;
+    padding:3px;
+    background-clip: content-box;
+    border: 1px solid rgba($color: #000000, $alpha: .08);
+    &::after{
+        content:"";
+        transform: scale(.8);
+        border: rgba($color: #000000, $alpha: .1);
+    }
+}
+
+.product-color-active{
+    border: solid #727272 1px;  
+}
+
+// .product-color-
+
+.product-property-label {
+    color: #3f3a3a;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-right: 1px solid #3f3a3a;
+    padding-right:1rem;
+    margin-right: 2rem;
+    @include respond(tab-port){
+        font-size: 1.9rem;
+    };
+}
+
+.product-property-size{
+    display: inline-block;
+
+}
+
+[class *= product-size-]{
+    color: white;
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: grey;
+    margin-right: 1rem;
+    border-radius: 10rem;
+    line-height: 2.6rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.product-size-active{
+    background-color: black;
+}
+.product-size-disabled{
+    background-color: lightgrey;
+}
+
+.product-number-container{
+    background-color: white;
+    width: 50%;
+    height:3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #979797;
+}
+
+[class *= product-number-calc-]{
+    min-width: 4rem;
+    height:2rem;
+    text-align: center;
+    font-size: large;
+    line-height: 2rem;
+    cursor: pointer;
+}
+.product-number-amount{
+    width:60%;
+    border: 0px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.product-btn-add{
+    display: inline-block;
+    width:100%;
+    padding:1rem;
+    background-color: black;
+    text-align: center;
+    color:white;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-decoration: none;
+    letter-spacing: .4rem;
+    margin: 2rem 0;
+    @include respond(tab-port){
+        font-size: 2.6rem;
+    };
+}
+
+.product-notes{
+    color: #3f3a3a;
+    font-size: 1.4rem;
+    margin-top: 1.8rem;
+    font-weight: 600;
+    @include respond(tab-port){
+        font-size: 2rem;
+    };
+}
+.product-content-label{
+    width: 100%;
+    color: #8b572a;
+    font-size: 1.4rem;
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content:"";
+        position: absolute;
+        background-color: #8b572a;
+        width:100%;
+        height:1px;
+        top:50%;
+        left: 10%;
+        @include respond(tab-port){
+            left: 25%;
+        };
+
+    }
+    @include respond(tab-port){
+        margin: 3rem 5%;
+        font-size: 1.8rem;
+    };
+}
+.product-story{
+    color: #3f3a3a;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    @include respond(tab-port){
+        margin: 0 5% 3rem 5%;
+        font-size: 1.8rem;
+    };
+}
+
+.product-image-content{
+    margin: 0 0 2% 0;
+    width: 100%;
+    height:auto;
+    @include respond(tab-port){
+        width:100%;
+        margin: 0 0 4% 0;
+    };
+}
